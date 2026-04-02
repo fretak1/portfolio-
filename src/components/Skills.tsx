@@ -3,7 +3,7 @@
 import { developer } from "@/lib/data";
 import styles from "./Skills.module.css";
 import { Database, Layout, Server, Settings } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Skills() {
     const categories = [
@@ -33,7 +33,7 @@ export default function Skills() {
         },
     ];
 
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -43,7 +43,7 @@ export default function Skills() {
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
