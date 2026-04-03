@@ -44,6 +44,12 @@ export const developer = {
       description: "Developing and maintaining complex web applications using React and Node.js.",
     },
     {
+      company: "CodeAlpha",
+      role: "Full Stack Development Intern",
+      period: "2024",
+      description: "Gained hands-on experience working with frontend and backend technologies, improved problem-solving skills, and built practical projects that strengthened my understanding of full stack development.",
+    },
+    {
       company: "Moti Engineering PLC",
       role: "Hardware and Networking Intern",
       period: "2025(April - June)",
@@ -67,6 +73,18 @@ export const developer = {
     },
   ],
   certificates: [
+    {
+      title: "Full Stack Development Internship Certificate",
+      issuer: "CodeAlpha",
+      year: "2024",
+      downloadLink: "/certificates/codealpha_certificate.pdf"
+    },
+    {
+      title: "Letter of Recommendation",
+      issuer: "CodeAlpha",
+      year: "2024",
+      downloadLink: "/certificates/codealpha_lor.pdf"
+    },
     {
       title: "Backend Development and APIs",
       issuer: "FreeCodeCamp",
