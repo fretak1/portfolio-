@@ -4,9 +4,13 @@
   background-color: var(--background);
   overflow: hidden;
   --frontend-accent: #007cf0;
+  --frontend-accent-rgb: 0, 124, 240;
   --backend-accent: #00dfd8;
+  --backend-accent-rgb: 0, 223, 216;
   --database-accent: #ff0080;
+  --database-accent-rgb: 255, 0, 128;
   --devops-accent: #7928ca;
+  --devops-accent-rgb: 121, 40, 202;
 }
 
 .header {
@@ -51,11 +55,12 @@
 
 .skillCard:hover {
   border-color: var(--accent);
-  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.4), 0 0 30px rgba(var(--accent-rgb), 0.25);
+  background: rgba(var(--card-rgb), 0.7);
 }
 
 .skillCard:hover .iconGlow {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .cardHeader {

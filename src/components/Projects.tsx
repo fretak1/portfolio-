@@ -53,75 +53,84 @@ export default function Projects() {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                 >
-                    {developer.projects.map((project, idx) => (
-                        <motion.div 
-                            key={idx} 
-                            className={styles.projectCard}
-                            variants={cardVariants}
-                            whileHover={{ 
-                                y: -12,
-                                rotateX: 2,
-                                rotateY: -2,
-                                transition: { duration: 0.3 }
-                            }}
-                            style={{ transformStyle: "preserve-3d" }}
-                        >
-                            <div className={styles.imageWrapper}>
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    fill
-                                    className={styles.projectImage}
-                                    priority={idx < 2}
-                                />
-                                <div className={styles.imageOverlay}>
-                                    <div className={styles.links}>
-                                        <motion.a 
-                                            href={project.demoLink} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            whileHover={{ scale: 1.1, y: -5 }}
-                                            whileTap={{ scale: 0.9 }}
-                                            className={styles.linkIcon}
-                                            aria-label="Live Demo"
-                                        >
-                                            <ExternalLink size={22} />
-                                        </motion.a>
-                                        <motion.a 
-                                            href={project.githubLink} 
-                                            id={`project-github-${idx}`} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            whileHover={{ scale: 1.1, y: -5 }}
-                                            whileTap={{ scale: 0.9 }}
-                                            className={styles.linkIcon}
-                                            aria-label="GitHub Repository"
-                                        >
-                                            <SiGithub size={22} />
-                                        </motion.a>
+                    {developer.projects.map((project, idx) => {
+                        // Dynamic badges for senior-level categorization
+                        const categoryBadge = idx === 0 
+                            ? "Enterprise Fullstack" 
+                            : idx === 1 
+                            ? "Operations & DB" 
+                            : "Real-time & WebSockets";
+
+                        return (
+                            <motion.div 
+                                key={idx} 
+                                className={styles.projectCard}
+                                variants={cardVariants}
+                                whileHover={{ 
+                                    y: -8,
+                                    transition: { duration: 0.2 }
+                                }}
+                            >
+                                <div className={styles.imageWrapper}>
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        fill
+                                        className={styles.projectImage}
+                                        priority={idx < 2}
+                                    />
+                                    <div className={styles.imageOverlay}>
+                                        <div className={styles.links}>
+                                            <motion.a 
+                                                href={project.demoLink} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                whileHover={{ scale: 1.1, y: -3 }}
+                                                whileTap={{ scale: 0.95 }}
+                                                className={styles.linkIcon}
+                                                aria-label="Live Demo"
+                                            >
+                                                <ExternalLink size={20} />
+                                            </motion.a>
+                                            <motion.a 
+                                                href={project.githubLink} 
+                                                id={`project-github-${idx}`} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                whileHover={{ scale: 1.1, y: -3 }}
+                                                whileTap={{ scale: 0.95 }}
+                                                className={styles.linkIcon}
+                                                aria-label="GitHub Repository"
+                                            >
+                                                <SiGithub size={20} />
+                                            </motion.a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className={styles.projectInfo}>
-                                <div className={styles.projectHeader}>
-                                    <h3 className={styles.projectTitle}>{project.title}</h3>
-                                    <ArrowRight className={styles.titleIcon} size={20} />
+                                <div className={styles.projectInfo}>
+                                    <div className={styles.badgeRow}>
+                                        <span className={styles.categoryBadge}>{categoryBadge}</span>
+                                    </div>
+                                    <div className={styles.projectHeader}>
+                                        <h3 className={styles.projectTitle}>{project.title}</h3>
+                                        <ArrowRight className={styles.titleIcon} size={18} />
+                                    </div>
+                                    <p className={styles.projectDesc}>{project.description}</p>
+                                    <div className={styles.techStack}>
+                                        {project.tech.map((tech, tIdx) => (
+                                            <motion.span 
+                                                key={tIdx} 
+                                                className={styles.techItem}
+                                                whileHover={{ y: -2, scale: 1.05 }}
+                                            >
+                                                {tech}
+                                            </motion.span>
+                                        ))}
+                                    </div>
                                 </div>
-                                <p className={styles.projectDesc}>{project.description}</p>
-                                <div className={styles.techStack}>
-                                    {project.tech.map((tech, tIdx) => (
-                                        <motion.span 
-                                            key={tIdx} 
-                                            className={styles.techItem}
-                                            whileHover={{ y: -2, scale: 1.05 }}
-                                        >
-                                            {tech}
-                                        </motion.span>
-                                    ))}
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        );
+                    })}
                 </motion.div>
             </div>
         </section>

@@ -130,6 +130,23 @@
   flex-direction: column;
 }
 
+.badgeRow {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.categoryBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  background: rgba(var(--primary-rgb), 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+}
+
 .projectHeader {
   display: flex;
   justify-content: space-between;

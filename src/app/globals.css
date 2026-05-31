@@ -1,34 +1,58 @@
 :root {
-  --background: #fdfdfd;
-  --foreground: #1a1a1a;
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
+  --background: #fafafa;
+  --background-rgb: 250, 250, 250;
+  --foreground: #0f172a;
+  --foreground-rgb: 15, 23, 42;
+  
+  --primary: #4f46e5; /* Indigo-600 */
+  --primary-rgb: 79, 70, 229;
+  --primary-hover: #4338ca;
+  
   --secondary: #64748b;
-  --accent: #3b82f6;
+  --accent: #06b6d4; /* Cyan-500 */
+  --accent-rgb: 6, 182, 212;
+  
   --border: #e2e8f0;
+  --border-rgb: 226, 232, 240;
+  
   --card: #ffffff;
-  --card-foreground: #1a1a1a;
+  --card-rgb: 255, 255, 255;
+  --card-foreground: #0f172a;
+  
   --muted: #f1f5f9;
-  --muted-foreground: #64748b;
+  --muted-rgb: 241, 245, 249;
+  --muted-foreground: #627185;
 
   --font-sans: var(--font-geist-sans), Inter, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  --transition-fast: 0.2s ease;
-  --transition-slow: 0.4s ease;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme='dark'] {
-  --background: #0f172a;
+  --background: #030712; /* Sleek midnight gray/black */
+  --background-rgb: 3, 7, 18;
   --foreground: #f8fafc;
-  --primary: #3b82f6;
-  --primary-hover: #60a5fa;
+  --foreground-rgb: 248, 250, 252;
+  
+  --primary: #6366f1; /* Indigo-500 */
+  --primary-rgb: 99, 102, 241;
+  --primary-hover: #818cf8;
+  
   --secondary: #94a3b8;
-  --accent: #60a5fa;
-  --border: #334155;
-  --card: #1e293b;
+  --accent: #22d3ee; /* Cyan-400 */
+  --accent-rgb: 34, 211, 238;
+  
+  --border: #1f2937;
+  --border-rgb: 31, 41, 55;
+  
+  --card: #0b0f19;
+  --card-rgb: 11, 15, 25;
   --card-foreground: #f8fafc;
-  --muted: #1e293b;
+  
+  --muted: #111827;
+  --muted-rgb: 17, 24, 39;
   --muted-foreground: #94a3b8;
 }
 
@@ -118,4 +142,27 @@ h6 {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--primary-rgb), 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Glassmorphism utility class */
+.glass {
+  background: rgba(var(--card-rgb), 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--border-rgb), 0.5);
 }

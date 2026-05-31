@@ -161,11 +161,13 @@
 }
 
 .form {
-  background: var(--card);
+  background: rgba(var(--card-rgb), 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   padding: 3rem;
   border-radius: 2rem;
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(var(--border-rgb), 0.5);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.25);
   width: 100%;
 }
 
@@ -185,8 +187,8 @@
 .formGroup textarea {
   width: 100%;
   padding: 1rem;
-  background: var(--muted);
-  border: 1px solid var(--border);
+  background: rgba(var(--background-rgb), 0.5);
+  border: 1px solid rgba(var(--border-rgb), 0.6);
   border-radius: 0.75rem;
   font-family: inherit;
   font-size: 1rem;
@@ -198,8 +200,8 @@
 .formGroup textarea:focus {
   outline: none;
   border-color: var(--primary);
-  background: var(--background);
-  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.1);
+  background: var(--card);
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.15), 0 0 15px rgba(var(--primary-rgb), 0.1);
 }
 
 .submitBtn {
@@ -217,8 +219,8 @@
 
 .submitBtn:hover {
   background: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(var(--primary-rgb), 0.4);
 }
 
 @media (max-width: 1024px) {

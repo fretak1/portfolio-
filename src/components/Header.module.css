@@ -10,9 +10,20 @@
 
 .scrolled {
   padding: 1rem 0;
-  background-color: var(--background);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
+  background-color: rgba(var(--background-rgb), 0.75);
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.scrollProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  z-index: 1001;
+  transition: width 0.1s ease;
 }
 
 .navContainer {
@@ -22,28 +33,46 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 800;
   color: var(--foreground);
+  letter-spacing: -0.02em;
 }
 
-.logo span {
+.logoDot {
   color: var(--primary);
 }
 
 .nav {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
-.nav a {
-  font-weight: 500;
+.navLink {
+  font-weight: 600;
   color: var(--muted-foreground);
   font-size: 0.95rem;
+  position: relative;
+  padding: 0.25rem 0;
 }
 
-.nav a:hover {
-  color: var(--primary);
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--foreground);
+}
+
+.navLink:hover::after {
+  width: 100%;
 }
 
 .themeToggle {

@@ -11,25 +11,29 @@ export default function Skills() {
             name: "Frontend", 
             items: developer.skills.frontend,
             icon: <Layout className={styles.icon} />,
-            color: "--frontend-accent"
+            color: "--frontend-accent",
+            colorRgb: "--frontend-accent-rgb"
         },
         { 
             name: "Backend", 
             items: developer.skills.backend,
             icon: <Server className={styles.icon} />,
-            color: "--backend-accent"
+            color: "--backend-accent",
+            colorRgb: "--backend-accent-rgb"
         },
         { 
             name: "Databases", 
             items: developer.skills.databases,
             icon: <Database className={styles.icon} />,
-            color: "--database-accent"
+            color: "--database-accent",
+            colorRgb: "--database-accent-rgb"
         },
         { 
             name: "DevOps & Tools", 
             items: developer.skills.devops,
             icon: <Settings className={styles.icon} />,
-            color: "--devops-accent"
+            color: "--devops-accent",
+            colorRgb: "--devops-accent-rgb"
         },
     ];
 
@@ -38,7 +42,7 @@ export default function Skills() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15,
+                staggerChildren: 0.1,
             },
         },
     };
@@ -51,7 +55,7 @@ export default function Skills() {
             transition: {
                 type: "spring",
                 stiffness: 100,
-                damping: 12
+                damping: 15
             },
         },
     };
@@ -67,7 +71,7 @@ export default function Skills() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className={styles.sectionTitle}>Skills & Technologies</h2>
-                    <p className={styles.subtitle}>A comprehensive toolkit I use to bring ideas to life with modern standards.</p>
+                    <p className={styles.subtitle}>A comprehensive toolkit I use to build secure, robust, and scalable solutions.</p>
                 </motion.div>
                 
                 <motion.div 
@@ -82,8 +86,11 @@ export default function Skills() {
                             key={idx} 
                             className={styles.skillCard}
                             variants={itemVariants}
-                            whileHover={{ y: -10, transition: { duration: 0.2 } }}
-                            style={{ "--accent": `var(${cat.color})` } as any}
+                            whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                            style={{ 
+                                "--accent": `var(${cat.color})`,
+                                "--accent-rgb": `var(${cat.colorRgb})`
+                            } as any}
                         >
                             <div className={styles.cardHeader}>
                                 <div className={styles.iconContainer}>
@@ -98,7 +105,7 @@ export default function Skills() {
                                     <motion.span 
                                         key={sIdx} 
                                         className={styles.skillItem}
-                                        whileHover={{ scale: 1.05, x: 5 }}
+                                        whileHover={{ scale: 1.02, x: 4 }}
                                     >
                                         <span className={styles.dot}></span>
                                         {skill}
