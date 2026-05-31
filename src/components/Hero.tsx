@@ -19,7 +19,7 @@ export default function Hero() {
                     className={styles.content}
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, cubicBezier: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <motion.div 
                         className={styles.badge}
