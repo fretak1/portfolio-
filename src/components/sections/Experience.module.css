@@ -222,4 +222,7 @@
   .timelinePoint {
     left: -1.5rem;
   }
+  .timelineContent {
+    padding: 1.25rem;
+  }
 }

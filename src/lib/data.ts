@@ -1,4 +1,6 @@
-export const developer = {
+import type { Developer } from "@/types";
+
+export const developer: Developer = {
   name: "Frezer Takele",
   title: "Fullstack Developer",
   tagline: "Building scalable web and mobile applications with Next.js, React Native, Node.js, and Spring Boot",
@@ -60,7 +62,7 @@ export const developer = {
   contact: {
     email: "frezertakele1@gmail.com",
     linkedin: "https://www.linkedin.com/in/frezer-takele-65b9b5382",
-    github: "https://github.com/frezertakele",
+    github: "https://github.com/fretak1",
     twitter: "https://twitter.com/frezertakele",
     telegram: "https://t.me/fretak",
     instagram: "https://www.instagram.com/f.r.e.t.a.k/?hl=en",

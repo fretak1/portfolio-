@@ -99,6 +99,12 @@ ul {
   padding: 0 2rem;
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
 section {
   padding: 5rem 0;
 }

@@ -247,3 +247,9 @@
     display: none; /* Hide animation on small mobiles to save space */
   }
 }
+
+@media (max-width: 480px) {
+  .form {
+    padding: 1.25rem;
+  }
+}
