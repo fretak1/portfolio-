@@ -43,7 +43,7 @@ export default function Experience() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className={styles.sectionTitle}>Work Experience</h2>
-                    <p className={styles.subtitle}>My professional pathway, combining internships, engineering roles, and freelance project achievements.</p>
+                    <p className={styles.subtitle}>My professional pathway, combining internships and engineering roles.</p>
                 </motion.div>
 
                 <div className={styles.timeline}>

@@ -4,7 +4,6 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
-import TerminalPlayground from "@/components/TerminalPlayground";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -20,7 +19,6 @@ export default function Home() {
         <Skills />
         <Projects />
         <Experience />
-        <TerminalPlayground />
         <Contact />
       </main>
       <Footer />

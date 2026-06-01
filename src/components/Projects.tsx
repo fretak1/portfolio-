@@ -54,12 +54,7 @@ export default function Projects() {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     {developer.projects.map((project, idx) => {
-                        // Dynamic badges for senior-level categorization
-                        const categoryBadge = idx === 0 
-                            ? "Enterprise Fullstack" 
-                            : idx === 1 
-                            ? "Operations & DB" 
-                            : "Real-time & WebSockets";
+                        
 
                         return (
                             <motion.div 
@@ -108,12 +103,9 @@ export default function Projects() {
                                     </div>
                                 </div>
                                 <div className={styles.projectInfo}>
-                                    <div className={styles.badgeRow}>
-                                        <span className={styles.categoryBadge}>{categoryBadge}</span>
-                                    </div>
+                                    
                                     <div className={styles.projectHeader}>
                                         <h3 className={styles.projectTitle}>{project.title}</h3>
-                                        <ArrowRight className={styles.titleIcon} size={18} />
                                     </div>
                                     <p className={styles.projectDesc}>{project.description}</p>
                                     <div className={styles.techStack}>
@@ -131,6 +123,24 @@ export default function Projects() {
                             </motion.div>
                         );
                     })}
+                </motion.div>
+
+                <motion.div 
+                    className={styles.footerAction}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                    <a 
+                        href={developer.contact.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className={styles.githubFull}
+                    >
+                        <SiGithub size={20} />
+                        <span>View More on GitHub</span>
+                    </a>
                 </motion.div>
             </div>
         </section>

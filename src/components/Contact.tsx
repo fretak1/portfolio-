@@ -52,7 +52,7 @@ export default function Contact() {
                         method="POST"
                     >
                         {/* Web3Forms Access Key - Get your free key at https://web3forms.com/ */}
-                        <input type="hidden" name="access_key" value="07a48070-458c-46a0-a113-e8732682eb7e" />
+                        <input type="hidden" name="access_key" value="e24bc21f-71d1-48e4-93f0-54c12ed3b4d0" />
                         
                         {/* Optional: Redirect users to a custom success page */}
                         <input type="hidden" name="redirect" value="https://web3forms.com/success" />

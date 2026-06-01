@@ -109,6 +109,9 @@
 }
 
 .secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   padding: 1rem 2rem;
   background: transparent;
   color: var(--foreground);

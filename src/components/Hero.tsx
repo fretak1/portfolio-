@@ -21,15 +21,7 @@ export default function Hero() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    <motion.div 
-                        className={styles.badge}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2 }}
-                    >
-                        <span className={styles.pulseDot}></span>
-                        Available for Full-time & Remote Roles
-                    </motion.div>
+                    
 
                     <h1 className={styles.title}>
                         Hi, I'm <span className="text-gradient">{developer.name}</span>
@@ -92,69 +84,12 @@ export default function Hero() {
                             priority
                         />
 
-                        {/* Floating Labels */}
-                        <motion.div 
-                            className={styles.floatingLabel1}
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        >
-                            🚀 Fullstack Architect
-                        </motion.div>
-
-                        <motion.div 
-                            className={styles.floatingLabel2}
-                            animate={{ y: [0, 10, 0] }}
-                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                        >
-                            ☕ Code Quality Focused
-                        </motion.div>
-
-                        {/* Orbiting Tech Icons */}
-                        <motion.div 
-                            className={`${styles.techIcon} ${styles.reactIcon}`}
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                        >
-                            <SiReact size={24} />
-                        </motion.div>
-
-                        <motion.div 
-                            className={`${styles.techIcon} ${styles.nextIcon}`}
-                            animate={{ y: [0, -8, 0] }}
-                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                        >
-                            <SiNextdotjs size={24} />
-                        </motion.div>
-
-                        <motion.div 
-                            className={`${styles.techIcon} ${styles.nodeIcon}`}
-                            animate={{ y: [0, 8, 0] }}
-                            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-                        >
-                            <SiNodedotjs size={24} />
-                        </motion.div>
-
-                        <motion.div 
-                            className={`${styles.techIcon} ${styles.postgresIcon}`}
-                            animate={{ scale: [1, 1.1, 1] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        >
-                            <SiPostgresql size={24} />
-                        </motion.div>
+                      
                     </div>
                 </motion.div>
             </div>
 
-            {/* Scroll Indicator */}
-            <motion.a 
-                href="#about" 
-                className={styles.scrollIndicator}
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                aria-label="Scroll to About section"
-            >
-                <ArrowDown size={18} />
-            </motion.a>
+           
         </section>
     );
 }

@@ -44,7 +44,7 @@ export default function Header() {
 
             <div className={`container ${styles.navContainer}`}>
                 <Link href="/" className={styles.logo}>
-                    Frezer<span className={styles.logoDot}>.</span>
+                    Fretak
                 </Link>
                 <nav className={styles.nav}>
                     <a href="#about" className={styles.navLink}>About</a>
