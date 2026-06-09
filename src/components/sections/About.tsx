@@ -119,7 +119,7 @@ export default function About() {
                                     <MapPin className={styles.metaIcon} size={18} />
                                     <div className={styles.metaInfo}>
                                         <span className={styles.metaLabel}>Location</span>
-                                        <span className={styles.metaValue}>Bahir Dar, Ethiopia</span>
+                                        <span className={styles.metaValue}>Addis Ababa, Ethiopia</span>
                                         <span className={styles.metaSub}>Open for relocation & remote roles globally</span>
                                     </div>
                                 </div>
