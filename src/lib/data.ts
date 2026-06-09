@@ -25,7 +25,7 @@ export const developer: Developer = {
       title: "KTS Support Portal & Operations Platform",
       description: "Designed a centralized support ticketing and inventory management system for KTS BDU, handling operations for many students.",
       tech: ["Next.js", "Node.js", "PostgreSQL", "TypeScript", "Express", "REST APIs"],
-      demoLink: "https://knowledge-and-tech-store-kts.vercel.app",
+      demoLink: "https://knowledge-and-tech-store-kts.vercel.app/",
       githubLink: "https://github.com/fretak1/Knowledge-and-Tech-Store-KTS.git",
       image: "/projects/kts.png",
     },
